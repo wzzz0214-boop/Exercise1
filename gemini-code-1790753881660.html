@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <title>Red Lantern Design</title>
+    <meta charset="UTF-8">
+    <!-- 行動設備優先 Mobile-first -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- 引入 Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- 原版專屬細節樣式（整合進 HTML，不需外部 css 檔案） -->
+    <style>
+        body {
+            background: #7a2122 url('images/body_bg.gif') repeat-x top;
+            font-family: Helvetica, sans-serif;
+            color: #333;
+        }
+        /* 特殊符號字體 */
+        .amp {
+            font-family: Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif;
+            font-weight: normal;
+            font-style: italic;
+        }
+        /* 導覽列白色文字與懸停效果 */
+        .nav-link-custom {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.4rem;
+        }
+        .nav-link-custom:hover {
+            color: #f8d7da;
+            text-decoration: underline;
+        }
+        /* 主卡片深紅外框與最大寬度限制 */
+        .main-card {
+            max-width: 800px;
+            background-color: #fff;
+            border: 5px solid #5c0505;
+        }
+        /* 橫幅標題背景 */
+        .tagline-banner {
+            font-size: 2rem;
+            background: url('images/tagline_bg.gif') repeat-x;
+        }
+        /* 側邊欄背景色 */
+        .sidebar-bg {
+            background-color: #eee;
+        }
+        /* 原版超連結灰底樣式 */
+        .content-links a {
+            color: #333;
+            background: #eee;
+            text-decoration: underline;
+        }
+        .content-links a:visited {
+            color: #ff0000;
+        }
+        /* 作品圖片灰邊框 */
+        .port-item {
+            border: 5px solid #ddd;
+            background: #fff;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 頂部頁首 (Header) -->
+    <header class="container mx-auto pt-4 pb-3" style="max-width: 800px;">
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-end">
+            <h1 class="m-0 text-center text-sm-start mb-3 mb-sm-0">
+                <img alt="Red Lantern logo" src="images/rl_logo.png" class="img-fluid" />
+            </h1>
+            <ul class="list-inline m-0 text-center text-sm-end">
+                <li class="list-inline-item ms-sm-3"><a class="nav-link-custom fw-bold" title="Red Lantern home" href="index.html">Home</a></li>
+                <li class="list-inline-item ms-3"><a class="nav-link-custom" title="Design services" href="services.html">Services</a></li>
+                <li class="list-inline-item ms-3"><a class="nav-link-custom" title="Our work" href="portfolio.html">Portfolio</a></li>
+                <li class="list-inline-item ms-3"><a class="nav-link-custom" title="Contact Red Lantern" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 主要內容卡片 (Main Content Card) -->
+    <main class="main-card container p-1 mb-5">
+        
+        <!-- 頂部圖片與標題區 -->
+        <section class="w-100 text-center" style="background-color: #ddd9b8;">
+            <img class="img-fluid w-100 d-block" alt="tokyo buildings" src="images/tokyo.jpg" />
+            <h1 class="h4 p-3 m-0  border-bottom border-top fw-bold text-dark ">
+                Red Lantern builds unique interfaces <span class="amp fw-normal">&amp;</span> user experiences
+            </h1>
+        </section>
+
+        <!-- 12 欄網格佈局：桌機並排，手機螢幕自動堆疊 -->
+        <div class="row g-3 p-2 m-0">
+            
+            <!-- 左邊：Our Work (在 md 尺寸以上佔 6 欄) -->
+            <section class="col-md-6 p-1">
+                <div class="sidebar-bg p-3 h-100">
+                    <h2 class="h5 fw-bold border-bottom border-secondary-subtle pb-2 mb-3">Our Work</h2>
+                    <ul class="row g-2 p-0 m-0">
+                        <li class="col-6 port-item p-0">
+                            <img class="img-fluid d-block w-100" alt="comp0" src="images/markinjapan.jpg" />
+                        </li>
+                        <li class="col-6 port-item p-0">
+                            <img class="img-fluid d-block w-100" alt="comp1" src="images/a2g.jpg" />
+                        </li>
+                        <li class="col-6 port-item p-0">
+                            <img class="img-fluid d-block w-100" alt="comp2" src="images/foobar.jpg" />
+                        </li>
+                        <li class="col-6 port-item p-0">
+                            <img class="img-fluid d-block w-100" alt="comp3" src="images/rpm.jpg" />
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 右邊：主內文 (在 md 尺寸以上佔 6 欄) -->
+            <section class="col-md-6 p-1">
+                <div class="bg-white p-3 h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <h2 class="h4 fw-bold mb-3">Welcome to the New Red Lantern Design</h2>
+                        <p class="text-dark mb-2" style="font-size: 1.4rem; line-height: 1.4;">
+                            Red Lantern is a small web design and consulting firm specializing in standards-based web design.
+                            Our goal is to build simple, beautiful webpages that make your information easy to find.
+                        </p>
+                        <p class="text-dark mb-3" style="font-size: 1.4rem; line-height: 1.4;">
+                            If you or your company is interested in working with us, please check out our portfolio and services,
+                            work and contact us with your project details. We look forward to hearing from you and helping you build
+                            on the web a little simpler and easier to find.
+                        </p>
+                    </div>
+                    <ul class="content-links list-unstyled m-0" style="font-size: 1.4rem;">
+                        <li class="mb-2"><a title="View our portfolio" href="#">View our full portfolio</a></li>
+                        <li><a title="Contact Red Lantern" href="#">Contact Red Lantern</a></li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- 頁尾版權條 (Footer) -->
+    <footer class="bg-body-secondary py-3 text-center border-top">
+        <div class="container">
+            <p class="text-muted m-0 small">Copyright &copy; Red Lantern Design, all rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
